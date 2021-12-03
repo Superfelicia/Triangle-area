@@ -26,6 +26,8 @@
 // triangleTwo: base = 16,5cm, height = 20,3cm
 
 // One
+let largestTriangle = "";
+
 let xOne = 10;
 let yOne = 13;
 let triangleOne = (xOne * yOne) / 2;
@@ -40,11 +42,15 @@ let triangleTwo = (xTwo * yTwo) / 2;
 console.log(triangleTwo);
 
 // Comparison
-console.log(triangleOne < triangleTwo)
+if (triangleOne > triangleTwo) {
+    largestTriangle = "Triangle One";
+} else if (triangleTwo > triangleOne) {
+    largestTriangle = "Triangle Two";
+}
 
 // Which triangle has the biggest area?
 console.log(`Triangle One has an area of ${triangleOne} cm2 and Triangle Two has 
-an area of ${triangleTwo} cm2. The triangle with the biggest area is Triangle Two.`);
+an area of ${triangleTwo} cm2. The triangle with the biggest area is ${largestTriangle}.`);
 
 
 
@@ -67,13 +73,17 @@ let triangleFour = (xFour * yFour) / 2;
 console.log(triangleFour);
 
 // Comparison
-console.log(triangleThree < triangleFour);
-console.log(triangleThree > triangleFour);
-console.log(triangleThree === triangleFour);
+if (triangleThree > triangleFour) {
+    largestTriangle = "Triangle Three";
+} else if (triangleFour > triangleThree) {
+    largestTriangle = "Triangle Four";
+} else (triangleThree === triangleFour); {
+    largestTriangle = "have the same area";
+}
 
 // Which triangle has the biggest area?
 console.log(`Triangle Three has an area of ${triangleThree} cm2 and Triangle Four has 
-an area of ${triangleFour} cm2. The triangles have the same area.`);
+an area of ${triangleFour} cm2. The triangles ${largestTriangle}.`);
 
 
 
@@ -96,17 +106,22 @@ let triangleSix = (xSix * ySix) / 2;
 console.log(triangleSix);
 
 // Comparison
-console.log(triangleFive < triangleSix);
+if (triangleFive > triangleSix) {
+    largestTriangle = "Triangle Five";
+} else if (triangleSix > triangleFive) {
+    largestTriangle = "Triangle Six";
+}
 
 // Which triangle has the biggest area?
 console.log(`Triangle Five has an area of ${triangleFive} cm2 and Triangle Six has 
-an area of ${triangleSix} cm2. The triangle with the biggest area is Triangle Six.`);
+an area of ${triangleSix} cm2. The triangle with the biggest area is ${largestTriangle}.`);
 
 
 
 // Answer the question why JavaScript needs the parentheses in this
 // case? You can put your answer as plain text when you hand in the
 // assignment.
+
 
 // JavaScript knows what to calculate first because of Operator Precedence.
 // It determines how operators should be "read". 
@@ -115,8 +130,8 @@ an area of ${triangleSix} cm2. The triangle with the biggest area is Triangle Si
 // The addition and subtraction operator ('+' '-') has precedence number 12.
 // The multiplication and division operator ('*' '/') has precedence number 13.
 // The grouping operator '()' has precedence number 19.
-// In this case we needed to add the parentheses to make sure that the *
-// got calculated before /. 
+// In this case we needed to add the parentheses (grouping operator) to make 
+// sure that the * got calculated before /. 
 
 // I don't know if I did anything wrong cause the calculation worked
 // with or without the parentheses... ://
